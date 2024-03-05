@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.profile-img {
+  border-radius: 50%;
+  border: 0.15rem solid white;
+  box-shadow: 0rem 0.25rem 1.25rem #808080;
+}
+
+.buttons-main {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  transition: 0.2s;
+
+}
+
+.buttons-main:focus {
+  transform: scale(1.1);
+}
+
+.buttons-main:hover {
+  transform: scale(1.1);
+  background-color: rgb(250, 250, 250);
+  color: rgb(25, 25, 25);
+}
+
+.buttons-main:active {
+  transform: scale(1.05);
+
+}
+
+html {
+  --line-color: #e5e7eb
+}
+
+.borderBlack {
+  @apply border border-black/10;
+}
