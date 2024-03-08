@@ -10,13 +10,13 @@ const resend = new Resend(process.env.REACT_APP_RESEND_API_KEY);
 export const sendEmail = async (formData: FormData) => {
   const senderEmail = formData.get("senderEmail");
   const message = formData.get("message");
-
+  console.log("sending message")
   if (!validateString(senderEmail, 500)) {
     return {
       error: "Invalid sender email",
     };
   }
-  if (!validateString(message, 50))  {
+  if (!validateString(message, 500))  {
     return {
       error: "Invalid message",
     };
