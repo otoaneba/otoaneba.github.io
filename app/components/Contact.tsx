@@ -7,6 +7,7 @@ import { motion } from 'framer-motion'
 import { useSectionInView } from '../lib/Hooks'
 import toast from "react-hot-toast";
 import { sendEmail } from '../actions/sendEmail'
+import SubmitBtn from './SubmitBtn'
 
 export default function Contact() {
 
@@ -40,7 +41,6 @@ export default function Contact() {
             toast.error(error);
             return;
           }
-
           toast.success("Email sent successfully!");
         }}>
         <input
@@ -56,9 +56,7 @@ export default function Contact() {
           className="h-52 borderBlack p-4"
           required
           maxLength={500}/>
-        <button
-          className="buttons-main hover:bg-gray-900  hover:text-white group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full outline-none transition-all mt-2">
-            Submit<FaPaperPlane className="text-xs opacity-70 transition-all buttons group-hover: translate-x-1 group-hover:-translate-y-1"/></button>
+        <SubmitBtn />
       </form>
     </motion.section>
   )
