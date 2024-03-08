@@ -12,11 +12,13 @@ export const sendEmail = async (formData: FormData) => {
   const message = formData.get("message");
   console.log("sending message")
   if (!validateString(senderEmail, 500)) {
+    console.log("error with senderEmail validation")
     return {
       error: "Invalid sender email",
     };
   }
   if (!validateString(message, 500))  {
+    console.log("error with message validation")
     return {
       error: "Invalid message",
     };
@@ -35,6 +37,7 @@ export const sendEmail = async (formData: FormData) => {
       })
     });
   } catch (error: unknown) {
+    console.log("error sending mail")
     return {
       error: getErrorMessage(error),
     };
