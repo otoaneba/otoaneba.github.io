@@ -1,13 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {  
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-      },
-    ],
-  },
+const nextConfig = {
+  basePath: "/",
+  output: "export",  // enable static exports
+  reactStrictMode: true,
   experimental: {
     serverActions: true,
   },
