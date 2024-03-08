@@ -34,8 +34,9 @@ export default function Contact() {
         className="mt-10 flex flex-col"
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
-
+          console.log("data in contact", data)
           if (error) {
+            console.log('error in contact', error)
             toast.error(error);
             return;
           }
